@@ -1,7 +1,7 @@
 CAMPO MINATO
 =====
 
-Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco (attenzione: non bisogna copiare tutta la cartella dell’esercizio ma solo l’index.html, e le cartelle js/ css/ con i relativi script e fogli di stile, per evitare problemi con l’inizializzazione di git). <br>
+Copiamo la griglia fatta ieri nella nuova repo e aggiungiamo la logica del gioco.<br>
 Il computer deve generare 16 numeri casuali nello stesso range della difficoltà prescelta: le bombe. <br> Attenzione: **nella stessa cella può essere posizionata al massimo una bomba, perciò nell’array delle bombe non potranno esserci due numeri uguali. <br>
 In seguito l’utente clicca su una cella: se il numero è presente nella lista dei numeri generati - abbiamo calpestato una bomba - la cella si colora di rosso e la partita termina. Altrimenti la cella cliccata si colora di azzurro e l’utente può continuare a cliccare sulle altre celle. <br>
 La partita termina quando il giocatore clicca su una bomba o quando raggiunge il numero massimo possibile di numeri consentiti (ovvero quando ha rivelato tutte le celle che non sono bombe).
@@ -14,3 +14,5 @@ Aggiungere una `select` accanto al bottone di generazione, che fornisca una scel
 - difficoltà 3 ⇒ 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
 
 ## STEPS
+
+- Creare un array delle bombe

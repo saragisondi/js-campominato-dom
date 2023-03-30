@@ -1,21 +1,16 @@
 const container = document.querySelector('.container');
 console.log(container);
+
 //collegare il bottone
-const button = document.getElementById('levels');
 const playBtn = document.getElementById('play')
 const select = document.querySelector('#levels');
-//bombe
-const BombNumber = 16;
-let Bombs = [];
 
 
+
+//funzione bottone
 playBtn.addEventListener('click', function() {
   console.log(playBtn.value);
   
-  
-  function generateBombs(Bombs) {
-    
-  }
 
   // eliminare tutti gli elementi con classe .box
   container.innerHTML = '';
@@ -37,6 +32,7 @@ playBtn.addEventListener('click', function() {
 
 })
   
+
 //modifico la misura delle caselle a seconda del livello
 if (select.value === '81') {
     boxes.classList.add('intermediate')
@@ -46,5 +42,19 @@ if (select.value === '81') {
 }
 }) 
 
+//creo un array per inserire le bombe
+let bombs = [];
+numBombs = 16;
 
-  
+//funzione bombe
+function generateBombs(min,max) {
+  while (bombs.length < numBombs) {
+    const newBomb = Math.floor(Math.random() * max) + 1;
+    if (!bombs.includes(newBomb)){ 
+      bombs.push(newBomb);
+    }
+    
+  }console.log(bombs)
+} 
+
+
