@@ -1,0 +1,81 @@
+/*GENERAL*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: pink;
+}
+.main-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  background-color: plum;
+  border: 2px solid black;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*BUTTON*/
+button{
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: #DDA0DD;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+select{
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+/*BOXES*/
+.box{
+  background-color: white;
+  width: calc(100% / 10);
+  height: calc(100% / 10);
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+
+.intermediate{
+width: calc(100% / 9);
+height: calc(100% / 9);
+}
+
+.difficult{
+  width: calc(100% / 7);
+  height: calc(100% / 7);
+  }
+
+.sky-blue{
+  background-color: skyblue;
+}
