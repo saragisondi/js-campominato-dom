@@ -4,6 +4,7 @@ console.log(container);
 const playBtn = document.getElementById('play')
 const select = document.querySelector('#levels');
 let numCell = 100;
+const numBombs = 16;
 
 const text = document.querySelector('.text')
 
@@ -29,20 +30,21 @@ playBtn.addEventListener('click', function() {
     container.appendChild(boxes);
 
     boxes.append(i)
-  
+    
     boxes.addEventListener('click', function (){
     console.log(this._Idn)
     boxes.classList.toggle('sky-blue');
     console.log(boxes)
 
    // se l'id della casella che ho cliccato corrisponde a uno dei numeri del bombs array significa che ho perso
-   
+
     if (bombs.includes(this._Idn)) {
     console.warn('hai preso una bomba');
     boxes.classList.toggle('red');
     text.append(messageLooser)
   }
   
+
     
 })
   

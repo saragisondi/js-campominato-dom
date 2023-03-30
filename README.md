@@ -15,4 +15,7 @@ Aggiungere una `select` accanto al bottone di generazione, che fornisca una scel
 
 ## STEPS
 
-- Creare un array delle bombe
+- Creo un array delle bombe;
+- Creo un ciclo che mi confronta la lunghezza dell array con il numero delle bombe, crea una bomba con numerazione randomica e creo una condizione in cui se la nuova bomba non è inclusa nell array me la deve aggiungere;
+- Creo delle costanti per il numero delle celle a seconda del livello selezionato;
+- Do una custom proprieties ai boxes che hanno le bombe e gli dico che ogni volta che ci clicco sopra devono diventare rossi e mi deve stampare in pagina il testo : 'hai perso!'.
