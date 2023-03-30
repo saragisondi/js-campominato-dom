@@ -4,7 +4,7 @@ console.log(container);
 //collegare il bottone
 const playBtn = document.getElementById('play')
 const select = document.querySelector('#levels');
-
+let numCell = 100;
 
 
 //funzione bottone
@@ -35,26 +35,34 @@ playBtn.addEventListener('click', function() {
 
 //modifico la misura delle caselle a seconda del livello
 if (select.value === '81') {
+    numCell = 81;
     boxes.classList.add('intermediate')
   }else if(select.value === '49'){
+    numCell = 49;
     boxes.classList.add('difficult')
   }
 }
 }) 
 
 //creo un array per inserire le bombe
-let bombs = [];
-numBombs = 16;
+let bombs = generateBombs(1, numCell);
+const numBombs = 16;
+
 
 //funzione bombe
-function generateBombs(min,max) {
-  while (bombs.length < numBombs) {
+function generateBombs(min, max)
+{
+  const bombsArray = [];
+
+  while (bombsArray.length < numBombs) {
     const newBomb = Math.floor(Math.random() * max) + 1;
-    if (!bombs.includes(newBomb)){ 
-      bombs.push(newBomb);
+    if (!bombsArray.includes(newBomb)){ 
+      bombsArray.push(newBomb);
     }
-    
-  }console.log(bombs)
+    console.log(bombsArray)
+  }
+
+  return bombsArray;
 } 
 
 
