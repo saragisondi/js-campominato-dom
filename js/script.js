@@ -1,12 +1,12 @@
 const container = document.querySelector('.container');
 console.log(container);
-
 //collegare il bottone
 const playBtn = document.getElementById('play')
 const select = document.querySelector('#levels');
 let numCell = 100;
 
 const bombsArray =[];
+
 
 //funzione bottone
 playBtn.addEventListener('click', function() {
@@ -29,10 +29,11 @@ playBtn.addEventListener('click', function() {
     boxes.classList.toggle('sky-blue');
 
    // se l'id della casella che ho cliccato corrisponde a uno dei numeri del bombs array significa che ho perso
+   
     if (bombs.includes(this._Idn)) {
-    console.warn('hai perso');
+    console.warn('hai preso una bomba');
     boxes.classList.toggle('red');
-    
+
   }
   
     
