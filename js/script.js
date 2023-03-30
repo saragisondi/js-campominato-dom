@@ -6,10 +6,10 @@ const playBtn = document.getElementById('play')
 const select = document.querySelector('#levels');
 let numCell = 100;
 
+const bombsArray =[];
 
 //funzione bottone
 playBtn.addEventListener('click', function() {
-  console.log(playBtn.value);
   
 
   // eliminare tutti gli elementi con classe .box
@@ -18,18 +18,24 @@ playBtn.addEventListener('click', function() {
   for (let i = 1; i <= select.value; i++) {
     let boxes = document.createElement('div');
     boxes.classList.add('box');
+    boxes._Idn= i;
     // boxes.classList.add('d-none');
     container.appendChild(boxes);
-    
-    console.log(boxes);
-    
+
     boxes.append(i)
   
     boxes.addEventListener('click', function (){
+    console.log(this._Idn)
     boxes.classList.toggle('sky-blue');
-    console.log('hai cliccato sul numero' +  (i))
 
-
+   // se l'id della casella che ho cliccato corrisponde a uno dei numeri del bombs array significa che ho perso
+    if (bombs.includes(this._Idn)) {
+    console.warn('hai perso');
+    boxes.classList.toggle('red');
+    
+  }
+  
+    
 })
   
 
@@ -41,28 +47,38 @@ if (select.value === '81') {
     numCell = 49;
     boxes.classList.add('difficult')
   }
+
+        
+  
 }
 }) 
 
 //creo un array per inserire le bombe
 let bombs = generateBombs(1, numCell);
-const numBombs = 16;
+
 
 
 //funzione bombe
 function generateBombs(min, max)
 {
   const bombsArray = [];
-
+  const numBombs = 16;
   while (bombsArray.length < numBombs) {
     const newBomb = Math.floor(Math.random() * max) + 1;
     if (!bombsArray.includes(newBomb)){ 
       bombsArray.push(newBomb);
     }
-    console.log(bombsArray)
+    
   }
 
+    
+
+   console.log(bombsArray)
   return bombsArray;
+
+  
 } 
 
 
+  
+  

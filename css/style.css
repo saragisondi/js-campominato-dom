@@ -79,3 +79,7 @@ height: calc(100% / 9);
 .sky-blue{
   background-color: skyblue;
 }
+
+.red{
+  background-color: rgb(104, 0, 0);
+}
